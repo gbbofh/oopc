@@ -19,7 +19,7 @@ correctly when casting to parent structure types. I.e.,
     char* cstr = real_str->vmt->to_cstring();
 ```
 
-Will invoke `object->vmt->to\_cstring()`. There are several possible fixes for this,
+Will invoke `object->vmt->to_cstring()`. There are several possible fixes for this,
 depeding on desired functionality. One such fix would be to overwrite the base
 vmt pointer, and require an explicit call to the parent method; this is similar
 to what would be expected in real object oriented languaged like C++:
